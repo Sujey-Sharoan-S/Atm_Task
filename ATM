@@ -1,0 +1,8 @@
+#include<stdio.h>
+
+#define Correct_Pin 2004
+int main()
+{
+printf("Welcome To Federal Bank\n");
+return 0;
+}
