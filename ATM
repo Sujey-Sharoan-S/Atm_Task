@@ -1,8 +1,42 @@
-#include<stdio.h>
+#include <stdio.h>
 
 #define Correct_Pin 2004
+
 int main()
 {
-printf("Welcome To Federal Bank\n");
-return 0;
+    int pin;
+    int attempts = 3;
+    
+    
+	printf("Welcome To Federal Bank\n");
+    {
+    while(attempts>0)
+    {
+            
+            printf("Enter Your PIN Number : ");
+            scanf("%d",&pin);
+        if(pin>=1000 && pin <=9999)
+        {
+            if (pin==Correct_Pin)
+            {
+                printf("\nAccess Granted");
+                break;
+            }
+            else
+            {
+                attempts--;
+                if(attempts>0)
+                    printf("\nEnter the Correct PIN : (%d Attempts Left)\n",attempts);
+                else 
+                    printf("\nAccess Denied");
+            
+            }
+        }
+        else
+            printf("\nInvalid Input! Enter only 4 Digits\n");
+    }
+    
+    }
+    
+	return 0;
 }
